@@ -1,7 +1,4 @@
 let searchQuery = "";
-document.querySelector(".logo").onclick = function() {
-    window.location.href = "/";
-};
 // Example data for search results
 async function fetchSearchResults(query) {
 	try {

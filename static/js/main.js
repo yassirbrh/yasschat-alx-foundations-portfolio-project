@@ -6,20 +6,13 @@ document.querySelector(".logo").onclick = function() {
 
 import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
 
-// Determine the appropriate protocol
-//const protocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
-const protocol = window.location.protocol;
-// Connect to the WebSocket server
 const socket = io.connect('http://' + document.domain + '/');
 
-// Event listener for when the connection is opened
 socket.on('connect', function (event) {
 	console.log('Connected to the WebSocket server!');
 });
 
-// Event listener for when a message is received from the server
-// Assuming you have a container element with an ID 'invitationsContainer' to display the invitations
-const invitationsContainer = document.querySelector('.invitations-list');
+
 
 // Step 1: Fetch username from /api/get-username
 fetch('/api/get-username')
@@ -57,6 +50,7 @@ fetch('/api/get-username')
 // Function to update the HTML content of the invitations container
 function updateInvitationsContainer(friendshipDetailsArray) {
 	// Clear previous content
+	const invitationsContainer = document.querySelector('.invitations-list');
 	invitationsContainer.innerHTML = '';
 
 	// Check if there are any invitations
@@ -140,6 +134,8 @@ async function fetchFriendships() {
 
 	// Clear existing friend elements
 	onlineFriendsList.innerHTML = '';
+	if (data.length === 0)
+		onlineFriendsList.innerHTML = '<p class="no-invitation">No Friends</p>';
 
 	data.forEach(friendship => {
 		if (friendship.isAccepted && friendship.ReceiverUsername !== username) {
@@ -218,7 +214,7 @@ function limitString(inputString, maxLength) {
 }
 
 const mainContent = document.getElementById('mainContent');
-const conversationsContainer = document.getElementById('conversationsContainer');
+//const conversationsContainer = document.getElementById('conversationsContainer');
 
 async function fetchAndDisplayFriendConversation(friendUsername) {
 	try {
@@ -350,6 +346,8 @@ async function fetchAndDisplayFriendConversation(friendUsername) {
 		console.error('Error fetching messages:', error);
 	}
 }
+
+
 async function fetchForRefreshChat(friendUsername) {
 	try {
 		const chatMessagesContainer = document.querySelector('.chat-messages');
@@ -550,7 +548,9 @@ async function fetchAndDisplayConversations() {
 		mainContent.appendChild(conversationsContainer);
 
 		if (!data.conversations || data.conversations.length === 0) {
-			// Handle case when there are no conversations
+			const conversationContainer = document.createElement('div');
+			conversationContainer.innerHTML = '<p class="no-invitation">No Conversations</p>';
+			conversationsContainer.appendChild(conversationContainer);
 		} else {
 			const conversationList = document.createElement('div');
 
@@ -622,11 +622,6 @@ async function fetchAndDisplayConversations() {
 	}
 }
 
-fetchAndDisplayConversations();
-
-
-// Fetch friendships when the page loads
-fetchFriendships();
 // Example functions for accepting and denying invitations (replace with actual logic)
 
 function getMessages() {
@@ -662,6 +657,10 @@ function listenForMessages() {
 		});
 }
 
+
+fetchAndDisplayConversations();
+
+fetchFriendships();
 // Call the function to start listening
 listenForMessages();
 

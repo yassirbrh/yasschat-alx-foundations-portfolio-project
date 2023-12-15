@@ -12,16 +12,11 @@ from models.Friendship import Friendship
 from models.Message import Message
 from datetime import datetime
 from sqlalchemy import or_, and_, desc
-#from flask_sse import sse
 
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
 app.secret_key = secrets.token_hex(16)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Yassir2001@localhost:3306/YassChat'
-#app.config['SESSION_COOKIE_SECURE'] = True
-#app.config['SESSION_COOKIE_HTTPONLY'] = False
-#app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config["REDIS_URL"] = "redis://localhost"
-#app.register_blueprint(sse, url_prefix='/stream_data')
 db.init_app(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 CORS(app)
@@ -101,11 +96,13 @@ def handle_signup():
 
     return render_template('signup.html')
 
+
 @app.route('/login')
 def login():
     if 'username' in session:
         return redirect(url_for('main'))
     return render_template('login.html')
+
 
 @app.route('/login', methods=['POST'])
 def handle_login():
@@ -125,6 +122,7 @@ def handle_login():
                 session['email'] = user.Email
                 return redirect(url_for('main'))
         return redirect(url_for('login'))
+
 
 @socketio.on('connect')
 def handle_connect():
@@ -164,11 +162,6 @@ def handle_disconnect():
         # Emit an event to inform others that the user has disconnected
         emit('user_disconnected', {'username': session['username']}, room=user_id)
 
-'''
-@app.route('/stream_data')
-def stream_data():
-    return sse.stream()
-'''
 
 @app.route('/api/read-message', methods=['POST'])
 def handle_read_message():
@@ -225,11 +218,7 @@ def send_message():
         return jsonify({'status': 'success'})
 
     except Exception as e:
-        print(f"Error handling send message: {str(e)}")
-        import traceback
-        traceback.print_exc()  # Print the full traceback
         return jsonify({'status': 'error', 'message': str(e)}), 500
-
 
 
 @app.route('/api/users', methods=['GET'])
@@ -468,6 +457,7 @@ def get_conversations():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+
 @app.route('/main')
 def main():
     if 'user_id' not in session:
@@ -489,12 +479,6 @@ def logout():
 
             # Commit the changes to the database
             db.session.commit()
-
-            # Remove user from the connected_users list
-            '''
-            if 'username' in session:
-                connected_users.remove(session['username'])
-            '''
 
             # Clear session data
             session.clear()
