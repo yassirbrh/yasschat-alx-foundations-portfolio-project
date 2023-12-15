@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Chat Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/search.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            YassChat
+        </div>
+        <div class="search-bar">
+            <form id="searchForm" action="/search" method="GET">
+                <input type="text" id="searchInput" name="query" placeholder="Search....">
+                <button type="submit" id="searchButton">Search</button>
+            </form>
+        </div>
+        <div class="nav-links">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+    <div id="searchResultsContainer"></div>
+
+    <!-- Example no results message -->
+    <p id="noResultsMessage" class="no-results" style="display: none;"></p>
+
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+    <!--script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script-->
+</body>
+</html>

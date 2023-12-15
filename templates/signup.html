@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Chat Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/forms.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            YassChat
+        </div>
+    </div>
+    <div class="form-container">
+        <form class="forms-form" action="/signup" method="post">
+            <h2>Create an Account</h2>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confpassword">Confirm Password:</label>
+            <input type="password" id="confpassword" name="confpassword" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <!-- Include this in your template where you want to display flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 YassChat. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/general.js') }}"></script>
+</body>
+</html>

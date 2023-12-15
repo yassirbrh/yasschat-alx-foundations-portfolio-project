@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Real-Time Chat Application</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="logo">
+				YassChat
+			</div>
+			<div class="search-bar">
+				<form id="searchForm" action="/search" method="GET">
+					<input type="text" id="searchInput" name="query" placeholder="Search....">
+					<button type="submit" id="searchButton">Search</button>
+				</form>
+			</div>
+			<div class="nav-links">
+				<a href="#">Profile</a>
+				<a href="#">Settings</a>
+				<a href="{{ url_for('logout') }}">Logout</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="online-friends-container">
+				<div class="containers-header">
+					Friends
+				</div>
+				<div class="friends-list">
+					<div class="online-friends-list">
+
+					</div>
+					<div class="offline-friends-list">
+
+					</div>
+				</div>
+			</div>
+			<div class="main-content" id="mainContent">
+                <!--
+				<div class="chat-container" id="chatContainer">
+					<div class="containers-header">
+						<button id="backToConversations" onclick="fetchAndDisplayConversations()"><- Conversations</button>
+						<span class="centered-header">Real-Time Chat</span>
+					</div>
+					<div class="chat-messages">
+					</div>
+					<div class="chat-input">
+						<input type="text" placeholder="Type a message...">
+						<button>Send</button>
+					</div>
+				</div>
+				<div class="conversations-container" id="conversationsContainer">
+				</div>
+            -->
+			</div>
+			<div class="invitations-container">
+				<div class="containers-header">
+					Invitations
+				</div>
+				<div class="invitations-list">
+				</div>
+			</div>
+		</div>
+		<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/functions.js') }}"></script>
+	</body>
+</html>

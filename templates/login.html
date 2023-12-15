@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Chat Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/forms.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            YassChat
+        </div>
+    </div>
+    <div class="form-container">
+        <form class="forms-form" method="post" action="/login">
+            <h2>Login into your account</h2>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 YassChat. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="{{ url_for('static', filename='js/general.js') }}"></script>
+</html>

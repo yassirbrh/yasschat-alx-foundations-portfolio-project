@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Chat Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/page.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            YassChat
+        </div>
+    </div>
+    <div class="cta-section">
+        <br><br><br><br><br><br><br><br>
+        <h1>Ready to join YassChat?</h1>
+
+        <div class="cta-buttons">
+
+            <a href="{{ url_for('signup') }}"><button class="signup">Sign Up</button></a>
+
+            <a href="{{ url_for('login') }}"><button class="login">Login</button></a>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 YassChat. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="{{ url_for('static', filename='js/general.js') }}"></script>
+</body>
+</html>

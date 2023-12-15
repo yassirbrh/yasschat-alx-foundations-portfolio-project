@@ -1,0 +1,518 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container,
+.conversations-container
+{
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.containers-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    /*scroll-snap-align: start;*/
+}
+
+.message.received {
+    background-color: #d3d3d3;
+    float: left;
+    clear: both; /* Add clear property */
+}
+
+.message.sent {
+    background-color: #007bff;
+    color: white;
+    float: right;
+    clear: both; /* Add clear property */
+}
+
+.user {
+    font-weight: bold;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.logo {
+    flex: 1;
+    font-size: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+/* Existing Chat Styles Remain Unchanged */
+
+/* Add these styles for navbar and logo */
+
+/* Remaining Styles for Messages and Input */
+/* Previous styles remain unchanged */
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    flex: 1;
+    font-size: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+}
+
+.search-bar input {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    margin-left: 5px;
+    padding: 6px 10px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 3px;
+}
+#searchForm {
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    width: 600px;
+    margin-right: 20px; /* Adjust this value to add space between input and button */
+}
+
+#searchButton {
+    display: inline-block;
+}
+
+/* Existing CSS Styles */
+
+.container {
+    display: flex;
+    height: 87vh;
+}
+
+.online-friends-container,
+.invitations-container {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+    margin: 10px; /* Adjust margin for spacing between containers */
+}
+
+.main-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Additional adjustments for better layout */
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.conversations-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    overflow-y: auto;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    /*scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;*/
+}
+
+/* New Styles for Online Friends and Invitations Containers */
+
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.friend {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.friend button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.online-friends-container button {
+    background-color: #4CAF50; /* Green color for online friends */
+    color: white;
+}
+
+.invitations-container button {
+    color: white;
+}
+.online-friends-list,
+.offline-friends-list
+{
+    overflow-y: auto;
+}
+
+.friend {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.friend-info {
+    display: grid;
+    grid-template-columns: 1fr auto; /* First column takes available space, second column is auto-sized */
+    align-items: center;
+}
+
+.username {
+    flex-grow: 1; /* Allow the username to grow and take available space */
+}
+
+.message-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.online-friends-list .status-circle {
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50; 
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.online-friends-list .status span {
+    font-size: 12px;
+    color: #4CAF50;
+}
+
+.offline-friends-list .status-circle {
+    width: 10px;
+    height: 10px;
+    background-color: #808080; 
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.offline-friends-list .status span {
+    font-size: 12px;
+    color: #808080;
+}
+
+.invitations-list {
+    overflow-y: auto;
+}
+
+.invitation {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invitation .user {
+    font-weight: bold;
+}
+
+.accept-button,
+.deny-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Green Button */
+.accept-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Red Button */
+.deny-button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.no-invitation {
+    color: gray; /* Change the color to your preference */
+    font-style: italic;
+    text-align: center;
+    /* Add any other styling you want for the "No Invitations" message */
+}
+
+#backToConversations {
+    margin-bottom: 1px;
+    padding: 5px 5px;
+    background-color: #8a929b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#backToConversations:hover {
+    background-color: #8a929b;
+}
+
+.centered-header {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 280px; /* Adjust the margin to create space between the button and the centered header */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .main-content {
+        width: 100%; /* Use full width on smaller screens */
+    }
+
+    .chat-container {
+        flex: 3; /* Take up even more vertical space on smaller screens */
+    }
+}
+
+.conversation-container {
+    cursor: pointer; /* Add cursor pointer for indicating it's clickable */
+    text-decoration: none; /* Remove default link underline */
+    color: #333; /* Set text color */
+    display: flex; /* Make the link a block-level element to fill the container */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border: 1px solid #808080;
+    border-radius: 8px;
+    transition: border-color border 1s ease-in-out;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.conversation-container:hover {
+    border-color: #0056b3;
+    border: 2px solid;
+}
+/* Styling for the username */
+.conv-username {
+    font-weight: bold;
+}
+
+.conv-message {
+    text-align: left;
+    color: #666
+}
+
+.conv-message-count {
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+.conv-user-details {
+    display: flex;
+    align-items: center;
+
+}
+
+.conv-message-details {
+    /*flex-grow: 1;*/
+}
+
+.conv-timestamp {
+    text-align: right;
+    color: #666;
+    margin-left: auto;
+}
+
+.conv-user-details,
+.conv-message-details {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+.status-div-online {
+    display: flex;
+    align-items: center;
+}
+.status-div-online .chathead-account-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4CAF50; /* Change the color as needed */
+  margin-left: 200px; /* Adjust the margin for spacing */
+  display: flex;
+  align-items: center;
+}
+.status-div-online .chathead-status-text {
+  margin-left: 10px; /* Adjust the margin for spacing */
+  font-size: 12px;
+  color: #4CAF50;
+}
+.status-div-offline {
+    display: flex;
+    align-items: center;
+}
+.status-div-offline .chathead-account-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #808080; /* Change the color as needed */
+  margin-left: 200px; /* Adjust the margin for spacing */
+  display: flex;
+  align-items: center;
+}
+.status-div-offline .chathead-status-text {
+  margin-left: 10px; /* Adjust the margin for spacing */
+  font-size: 12px;
+  color: #808080;
+}
+.message.received .message-time {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  font-size: 10px; /* Adjust the font size as needed */
+  color: black; /* Adjust the color as needed */
+    margin-top: 10px;
+  margin-left: 0px;
+}
+.message.sent .message-time {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  font-size: 10px; /* Adjust the font size as needed */
+  color: white; /* Adjust the color as needed */
+    margin-top: 10px;
+  margin-right: 0px;
+}

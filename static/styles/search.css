@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.logo {
+    flex: 1;
+    font-size: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+/* Remaining Styles for Messages and Input */
+/* Previous styles remain unchanged */
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    flex: 1;
+    font-size: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+}
+
+.search-bar input {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    margin-left: 5px;
+    padding: 6px 10px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 3px;
+}
+
+/* Style for the result div */
+.result-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the user details */
+.user-details {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* Style for the action buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style for the invitation button */
+.invite-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.accept-button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.deny-button {
+    background-color: #e74c3c; /* Red color */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#noResultsMessage {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    color: #ff0000; /* You can adjust the color as needed */
+    margin-top: 20px; /* Adjust the margin for spacing */
+}
+#searchForm {
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    width: 600px;
+    margin-right: 20px; /* Adjust this value to add space between input and button */
+}
+
+#searchButton {
+    display: inline-block;
+}
+/* Style for the already sent button */
+.sent-button {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: not-allowed;
+}
+
+/* Style for the friend button */
+.friend-button {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: not-allowed;
+}
+/* Remaining Styles for Chat */
+
