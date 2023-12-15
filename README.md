@@ -1,4 +1,3 @@
-# yasschat-alx-foundations-portfolio-project
 # YassChat - ALX Foundations Portfolio Project
 
 YassChat is a real-time chat application developed as part of the ALX Foundations curriculum. This project showcases fundamental skills in web development, Flask, Socket.IO, and more.
