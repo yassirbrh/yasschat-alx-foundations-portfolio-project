@@ -35,6 +35,8 @@ YassChat is a real-time chat application developed as part of the ALX Foundation
 - `/app/api`: Flask routes for handling API Requests.
 - `/app/routes.py`: Flask routes for handling HTTP requests
 - `/app/sockets.py`: Socket.IO events and handlers
+- `db_yasschat.sql`: SQL script to create the database YassChat and the tables (User, Friendship, Message)
+- `create_fake_user_data.sql`: SQL script to create fake user data in the database.
 
 ## Contributions
 
