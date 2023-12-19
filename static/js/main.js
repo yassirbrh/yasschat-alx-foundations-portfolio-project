@@ -665,5 +665,5 @@ fetchFriendships();
 listenForMessages();
 
 // Set up a repeating interval (e.g., every 1 second)
-setInterval(listenForMessages, 500);
+setInterval(listenForMessages, 1000);
 

@@ -1,4 +1,4 @@
-from models.User import db
+from . import db
 from datetime import datetime
 
 class Friendship(db.Model):
