@@ -42,4 +42,4 @@ YassChat is a real-time chat application developed as part of the ALX Foundation
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-
+![YassChat](static/img/main.png)
