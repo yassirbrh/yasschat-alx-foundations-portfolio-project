@@ -2,6 +2,8 @@
 
 YassChat is a real-time chat application developed as part of the ALX Foundations curriculum. This project showcases fundamental skills in web development, Flask, Socket.IO, and more.
 
+![YassChat](static/img/main.png)
+
 ## Features
 
 - Real-time chat between users
@@ -42,4 +44,3 @@ YassChat is a real-time chat application developed as part of the ALX Foundation
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-![YassChat](static/img/main.png)
