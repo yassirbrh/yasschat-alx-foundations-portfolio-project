@@ -1,33 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Real-Time Chat Application</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/page.css') }}">
-</head>
-<body>
-    <div class="navbar">
-        <div class="logo">
-            YassChat
-        </div>
-    </div>
-    <div class="cta-section">
-        <br><br><br><br><br><br><br><br>
-        <h1>Ready to join YassChat?</h1>
 
-        <div class="cta-buttons">
+	<head>
+		<meta charset="UTF-8">
+		<title>YassChat - Real-Time Chat Application</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/page.css') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&display=swap">
+	</head>
 
-            <a href="{{ url_for('signup') }}"><button class="signup">Sign Up</button></a>
+	<body>
+		<div class="header">
+			<div class="logo">
+				YassChat
+			</div>
+			<div class="nav-links">
+				<a href="#features">Features</a>
+				<a href="#about">About</a>
+				<a href="#about">Contact</a>
+			</div>
+		</div>
 
-            <a href="{{ url_for('login') }}"><button class="login">Login</button></a>
+		<div class="intro-section">
+			<h1>YassChat - Real-Time Chat Application</h1>
+			<p>Join the conversation in real-time with YassChat. Connect with friends and make your communication seamless.</p>
+			<div class="buttons">
+				<a href="{{ url_for('signup') }}"><button class="signup">Sign Up</button></a>
+				<a href="{{ url_for('login') }}"><button class="login">Login</button></a>
+			</div>
+		</div>
 
-        </div>
-    </div>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2023 YassChat. All rights reserved.</p>
-        </div>
-    </footer>
-    <script type="module" src="{{ url_for('static', filename='js/general.js') }}"></script>
-</body>
+		<div id="features" class="feature-section fade-in">
+			<!-- Feature 1 -->
+			<div class="feature fade-in">
+				<h2>Real-Time Messaging</h2>
+				<p>Experience instant messaging with real-time updates and notifications.</p>
+				<img src="{{ url_for('static', filename='img/message.png') }}" alt="Feature 1 Image">
+			</div>
+
+			<!-- Feature 2 -->
+			<div class="feature fade-in">
+				<h2>User-Friendly Interface</h2>
+				<p>Enjoy a user-friendly interface designed for ease of use and seamless communication.</p>
+				<img src="{{ url_for('static', filename='img/main.png') }}" alt="Feature 2 Image">
+			</div>
+
+			<!-- Feature 3 -->
+			<div class="feature fade-in">
+				<h2>Search for Friends</h2>
+				<p>Discover and connect with friends easily using YassChat's intuitive search feature. Find and add new friends to your network.</p>
+				<img src="{{ url_for('static', filename='img/search.png') }}" alt="Feature 3 Image">
+			</div>
+		</div>
+
+		<div id="about" class="about-section">
+			<h2>About YassChat</h2>
+			<p>
+			YassChat is the result of a journey that began during my undergraduate studies. Originally conceived as a graduation project in Java, the application has now undergone a transformation, leveraging the skills and knowledge acquired through the ALX Software Engineering Program. This reimagination of YassChat utilizes Flask for the backend and JavaScript for the frontend, creating a real-time chat application that not only reflects the evolution of technology but also showcases my growth as a software developer. The goal remains the same: to provide users with a seamless and secure communication experience.
+			</p>
+			<div class="team-members">
+				<h3>Meet Me: Yassir Brhaiberh</h3>
+				<ul>
+					<li>
+						<a href="https://www.linkedin.com/in/yassirbrhaiberh/" target="_blank">
+							<img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="LinkedIn Logo">
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/yassirbrh/" target="_blank">
+							<img src="{{ url_for('static', filename='img/github.png') }}" alt="GitHub Logo">
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/yassirbrh" target="_blank">
+							<img src="{{ url_for('static', filename='img/twitter.png') }}" alt="Twitter Logo">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="view_github">
+                <a href="https://github.com/yassirbrh/yasschat-alx-foundations-portfolio-project/" target="_blank">
+                    <img src="{{ url_for('static', filename='img/code.png') }}" alt="LinkedIn Logo">
+                </a>
+                <p>View the project on Github</p>         
+            </div>
+		</div>
+		<script src="{{ url_for('static', filename='js/general.js') }}"></script>
+		<footer>
+			<div class="footer-content">
+				<p>&copy; 2023 YassChat. All rights reserved.</p>
+			</div>
+		</footer>
+	</body>
+
 </html>

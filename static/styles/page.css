@@ -142,3 +142,174 @@ footer p {
 
 /* Remaining Styles for Chat */
 
+.header {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.header .logo {
+    flex: 1;
+    font-size: 24px;
+}
+
+.header .nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.intro-section {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    /*margin-bottom: 30%;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10%;
+    animation: neonAnimation 1.5s ease-in-out infinite alternate;
+}
+
+.feature-section {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    grid-gap: 20px; /* Adjust the gap between features as needed */
+    opacity: 0;
+    margin-top: 200px;
+    margin-bottom: 80px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#features {
+    display: flex; /* Use flexbox to display features in a row */
+    justify-content: center; /* Center the features horizontally */
+    align-items: center;
+}
+
+.feature {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    /*width: calc(50% - 400px); Set the width to 50% of the page minus margins */
+    max-width: 60%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.feature {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.feature img {
+    width: 60%; /* Make the image fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    width: 60%; /* Set the width of the description */
+    margin: 0 auto; /* Center the description within the feature */
+}
+.about-section {
+    background-color: #f6f6f6;
+    padding: 30px;
+    text-align: center;
+}
+
+.about-section p {
+    margin: 0 auto;
+    width: 50%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.about-section h2 {
+    color: #333;
+}
+
+.team-members ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-members li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.team-members a {
+    text-decoration: none;
+    width: 40px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.team-members img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#view_github {
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#view_github p {
+    font-family: Arial, sans-serif;
+}
+
+#view_github img {
+    width: 50px;
+    height: 50px;
+}
+
+#view_github:hover, .team-members img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+}
+.fade-in {
+    opacity: 1 !important; /* Override the initial opacity */
+}
+.buttons {
+    flex-direction: row;
+    align-items: center;
+}
+/* Remaining Styles for Chat */
